@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlashLight : MonoBehaviour {
 	
 	public bool lightOn;
-
+	
 	Light light;
 
 	// Use this for initialization
