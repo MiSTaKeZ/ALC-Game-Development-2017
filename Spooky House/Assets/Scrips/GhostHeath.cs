@@ -34,16 +34,17 @@ public class GhostHeath : MonoBehaviour {
 			print("Ghost is Stunned!");
 			// other.GetComponent<Rigidbody>().Velocity = Vector3.zero;
 			// other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+			
 			other.GetComponent<Ghost>().moveSpeed = 0f;
-			StartCoroutine(Wait(5));
+			StartCoroutine(Wait(5, other));
 			//StopCoroutine(Wait(5));
 			
 		}	
 	}
 
-	IEnumerator Wait(float time){
+	IEnumerator Wait(float time, Collider other){
 			yield return new WaitForSeconds(time);
-			ghost.GetComponent<Ghost>().moveSpeed = 5f;
+			other.GetComponent<Ghost>().moveSpeed = 5f;
 			print("Ghost is unstunned");
 
 	}			
