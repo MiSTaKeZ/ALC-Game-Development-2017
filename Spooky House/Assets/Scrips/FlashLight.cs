@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class FlashLight : MonoBehaviour {
 	
-	public bool lightOn;
-	
+	public bool lightOn  = true;
+	// Flashlight power capacity
+	public int maxPower = 4;
+	// Usualbe flashlight power
+	public int currentPower;
+
 	Light light;
 
 	// Use this for initialization
 	void Start () {
+		currentPower = maxPower;
+		print("Power = " + maxPower);
 		light = GetComponent<Light> ();
 		//Set Light default to ON
 		lightOn = true; 
