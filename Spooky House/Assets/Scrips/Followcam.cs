@@ -12,12 +12,6 @@ public class Followcam : MonoBehaviour {
 	void Awake(){
 		myT = transform;
 	}
-    
-	 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
