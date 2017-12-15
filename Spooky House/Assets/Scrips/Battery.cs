@@ -32,5 +32,5 @@ public class Battery : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
-
+	
 }
